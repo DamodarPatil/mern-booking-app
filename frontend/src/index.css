@@ -1,0 +1,11 @@
+@import './assets/fonts/fonts.css';
+
+/* Apply the Gilroy font as the default font for the entire application */
+body {
+    font-family: 'Gilroy', sans-serif;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
