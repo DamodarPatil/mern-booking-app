@@ -40,19 +40,19 @@ const Register = () => {
   });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-background-50">
       <form
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md space-y-6"
         onSubmit={onSubmit}
       >
-        <h2 className="text-3xl font-bold text-center mb-6 text-black">
+        <h2 className="text-3xl font-bold text-center mb-6 text-text-900">
           Create an Account
         </h2>
         <div className="flex flex-col md:flex-row gap-5">
           <label className="flex-1">
-            <span className="text-gray-700 text-sm font-bold">First Name</span>
+            <span className="text-black text-sm font-semibold">First Name</span>
             <input
-              className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+              className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
               {...register("firstName", { required: "This field is required" })}
               type="text"
             />
@@ -63,9 +63,9 @@ const Register = () => {
             )}
           </label>
           <label className="flex-1">
-            <span className="text-gray-700 text-sm font-bold">Last Name</span>
+            <span className="text-black text-sm font-semibold">Last Name</span>
             <input
-              className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+              className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
               {...register("lastName", { required: "This field is required" })}
               type="text"
             />
@@ -77,9 +77,9 @@ const Register = () => {
           </label>
         </div>
         <label className="block">
-          <span className="text-gray-700 text-sm font-bold">Email</span>
+          <span className="text-black text-sm font-semibold">Email</span>
           <input
-            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
             {...register("email", { required: "This field is required" })}
             type="email"
           />
@@ -90,14 +90,18 @@ const Register = () => {
           )}
         </label>
         <label className="block">
-          <span className="text-gray-700 text-sm font-bold">Password</span>
+          <span className="text-black text-sm font-semibold">Password</span>
           <input
-            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
             {...register("password", {
               required: "This field is required",
               minLength: {
                 value: 6,
                 message: "Password must be at least 6 characters",
+              },
+              pattern: {
+                value: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])/,
+                message: "Password must include at least one uppercase letter, one number, and one special character",
               },
             })}
             type="password"
@@ -109,11 +113,11 @@ const Register = () => {
           )}
         </label>
         <label className="block">
-          <span className="text-gray-700 text-sm font-bold">
+          <span className="text-black text-sm font-semibold">
             Confirm Password
           </span>
           <input
-            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
             {...register("confirmPassword", {
               validate: (val) => {
                 if (!val) {
@@ -133,7 +137,7 @@ const Register = () => {
         </label>
         <button
           type="submit"
-          className="bg-[#b30000] text-white py-2 px-4 rounded-md font-semibold hover:bg-[#cc0000] transition duration-200 w-full"
+          className="bg-accent-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-accent-600 transition duration-200 w-full"
         >
           Create Account
         </button>

@@ -4,7 +4,7 @@ import { useAppContext } from "../contexts/AppContext";
 import SignOutButton from "./SignOutButton";
 
 const Header = () => {
-  const { isLoggendIn } = useAppContext();
+  const { isLoggedIn } = useAppContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -16,24 +16,23 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#b30000] py-6 flex items-center justify-between">
+    <div className="bg-primary-500 py-6 flex items-center justify-between">
       <div className="container mx-auto flex justify-between items-center lg:px-32 px-4">
-        <span className="text-2xl md:text-3xl text-white font-bold tracking-tight">
+        <span className="text-2xl md:text-3xl text-text-50 font-bold tracking-tight">
           <Link to="/">AryaVihar.com</Link>
         </span>
-        {/* Navigation Links (Desktop) */}
         <nav className="hidden md:flex space-x-7">
-          {isLoggendIn ? (
+          {isLoggedIn ? (
             <>
               <Link
                 to="/my-bookings"
-                className="text-white font-semibold hover:text-[#cccccc] py-2"
+                className="text-text-50 font-semibold hover:text-text-100 py-2"
               >
                 My Bookings
               </Link>
               <Link
                 to="/my-hotels"
-                className="text-white font-semibold hover:text-[#cccccc] py-2"
+                className="text-text-50 font-semibold hover:text-text-100 py-2"
               >
                 My Hotels
               </Link>
@@ -42,13 +41,12 @@ const Header = () => {
           ) : (
             <Link
               to="/sign-in"
-              className="rounded-md bg-[#FFFFFF] text-[#b30000] px-4 py-2 font-bold hover:bg-[#e6e6e6]"
+              className="rounded-md bg-background-50 text-primary-500 px-4 py-2 font-bold hover:bg-background-100"
             >
               Sign In
             </Link>
           )}
         </nav>
-        {/* Mobile Menu Icon */}
         <button
           className="md:hidden flex items-center focus:outline-none"
           onClick={toggleMobileMenu}
@@ -59,7 +57,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-6 w-6 text-white"
+              className="h-6 w-6 text-text-50"
             >
               <path
                 strokeLinecap="round"
@@ -74,7 +72,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-6 w-6 text-white"
+              className="h-6 w-6 text-text-50"
             >
               <path
                 strokeLinecap="round"
@@ -85,9 +83,8 @@ const Header = () => {
             </svg>
           )}
         </button>
-        {/* Mobile Menu */}
         <div
-          className={`fixed top-16 right-0 w-[200px] max-w-sm rounded-[10px] bg-white p-4 md:hidden transform ${
+          className={`fixed top-16 right-0 w-[200px] max-w-sm rounded-[10px] bg-background-50 p-4 md:hidden transform ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out shadow-lg z-50`}
         >
@@ -95,19 +92,19 @@ const Header = () => {
             className="self-end mb-4 focus:outline-none"
             onClick={toggleMobileMenu}
           ></button>
-          {isLoggendIn ? (
+          {isLoggedIn ? (
             <>
               <Link
                 to="/my-bookings"
-                className="block py-1 px-4 mb-3 text-black hover:bg-[#e6e6e6]"
-                onClick={closeMobileMenu} // Close menu on click
+                className="block py-1 px-4 mb-3 text-text-900 hover:bg-background-100"
+                onClick={closeMobileMenu}
               >
                 My Bookings
               </Link>
               <Link
                 to="/my-hotels"
-                className="block py-1 px-4 mb-3 text-black hover:bg-[#e6e6e6]"
-                onClick={closeMobileMenu} // Close menu on click
+                className="block py-1 px-4 mb-3 text-text-900 hover:bg-background-100"
+                onClick={closeMobileMenu}
               >
                 My Hotels
               </Link>
@@ -116,8 +113,8 @@ const Header = () => {
           ) : (
             <Link
               to="/sign-in"
-              className="block py-1 px-4 text-black hover:bg-[#e6e6e6]"
-              onClick={closeMobileMenu} // Close menu on click
+              className="block py-1 px-4 text-text-900 hover:bg-background-100"
+              onClick={closeMobileMenu}
             >
               Sign In
             </Link>

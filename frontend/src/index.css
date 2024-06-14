@@ -1,11 +1,158 @@
-@import './assets/fonts/fonts.css';
+@import "./assets/fonts/fonts.css";
 
 /* Apply the Gilroy font as the default font for the entire application */
 body {
-    font-family: 'Gilroy', sans-serif;
-  }
+  font-family: "Gilroy", sans-serif;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --text-50: #edf8f5;
+    --text-100: #daf1ea;
+    --text-200: #b5e3d6;
+    --text-300: #90d5c1;
+    --text-400: #6bc7ad;
+    --text-500: #46b998;
+    --text-600: #38947a;
+    --text-700: #2a6f5b;
+    --text-800: #1c4a3d;
+    --text-900: #0e251e;
+    --text-950: #07120f;
+
+    --background-50: #ecf8f5;
+    --background-100: #daf1eb;
+    --background-200: #b4e4d6;
+    --background-300: #8fd6c2;
+    --background-400: #69c9ae;
+    --background-500: #44bb99;
+    --background-600: #36967b;
+    --background-700: #29705c;
+    --background-800: #1b4b3d;
+    --background-900: #0e251f;
+    --background-950: #07130f;
+
+    --primary-50: #edf8f5;
+    --primary-100: #dbf0eb;
+    --primary-200: #b6e2d7;
+    --primary-300: #92d3c3;
+    --primary-400: #6dc5af;
+    --primary-500: #49b69b;
+    --primary-600: #3a927c;
+    --primary-700: #2c6d5d;
+    --primary-800: #1d493e;
+    --primary-900: #0f241f;
+    --primary-950: #07120f;
+
+    --secondary-50: #edf3f8;
+    --secondary-100: #dbe8f0;
+    --secondary-200: #b7d1e1;
+    --secondary-300: #92bad3;
+    --secondary-400: #6ea3c4;
+    --secondary-500: #4a8cb5;
+    --secondary-600: #3b7091;
+    --secondary-700: #2c546d;
+    --secondary-800: #1e3848;
+    --secondary-900: #0f1c24;
+    --secondary-950: #070e12;
+
+    --accent-50: #edf1f8;
+    --accent-100: #dbe4f0;
+    --accent-200: #b6c8e2;
+    --accent-300: #92add3;
+    --accent-400: #6d92c5;
+    --accent-500: #4976b6;
+    --accent-600: #3a5f92;
+    --accent-700: #2c476d;
+    --accent-800: #1d2f49;
+    --accent-900: #0f1824;
+    --accent-950: #070c12;
+
+    --success-50: #e6f8ed;
+    --success-100: #cef0d6;
+    --success-200: #9ee0ad;
+    --success-300: #6ec085;
+    --success-400: #3fa05c;
+    --success-500: #0f8044;
+    --success-600: #0d6837;
+    --success-700: #0a502a;
+    --success-800: #07381d;
+    --success-900: #041810;
+
+    --danger-50: #fdeaea;
+    --danger-100: #fbd5d5;
+    --danger-200: #f7acac;
+    --danger-300: #f48282;
+    --danger-400: #f15959;
+    --danger-500: #ee2f2f;
+    --danger-600: #c42525;
+    --danger-700: #9a1b1b;
+    --danger-800: #701010;
+    --danger-900: #460606;
+  }
+  .dark {
+    --text-50: #07120f;
+    --text-100: #0e251e;
+    --text-200: #1d493c;
+    --text-300: #2b6e5a;
+    --text-400: #399378;
+    --text-500: #47b896;
+    --text-600: #6cc6ab;
+    --text-700: #91d4c0;
+    --text-800: #b6e2d5;
+    --text-900: #daf1ea;
+    --text-950: #edf8f4;
+
+    --background-50: #07130f;
+    --background-100: #0e251f;
+    --background-200: #1b4b3d;
+    --background-300: #29705c;
+    --background-400: #36967b;
+    --background-500: #44bb99;
+    --background-600: #69c9ae;
+    --background-700: #8fd6c2;
+    --background-800: #b4e4d6;
+    --background-900: #daf1eb;
+    --background-950: #ecf8f5;
+    
+
+    --primary-50: #07120f;
+    --primary-100: #0f241f;
+    --primary-200: #1d493e;
+    --primary-300: #2c6d5d;
+    --primary-400: #3a927c;
+    --primary-500: #49b69b;
+    --primary-600: #6dc5af;
+    --primary-700: #92d3c3;
+    --primary-800: #b6e2d7;
+    --primary-900: #dbf0eb;
+    --primary-950: #edf8f5;
+
+    --secondary-50: #070e12;
+    --secondary-100: #0f1c24;
+    --secondary-200: #1e3848;
+    --secondary-300: #2c546d;
+    --secondary-400: #3b7091;
+    --secondary-500: #4a8cb5;
+    --secondary-600: #6ea3c4;
+    --secondary-700: #92bad3;
+    --secondary-800: #b7d1e1;
+    --secondary-900: #dbe8f0;
+    --secondary-950: #edf3f8;
+
+    --accent-50: #070c12;
+    --accent-100: #0f1824;
+    --accent-200: #1d2f49;
+    --accent-300: #2c476d;
+    --accent-400: #3a5f92;
+    --accent-500: #4976b6;
+    --accent-600: #6d92c5;
+    --accent-700: #92add3;
+    --accent-800: #b6c8e2;
+    --accent-900: #dbe4f0;
+    --accent-950: #edf1f8;
+  }
+}

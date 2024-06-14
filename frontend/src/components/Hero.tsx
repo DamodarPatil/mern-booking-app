@@ -36,15 +36,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-[#b30000] pb-10 pt-2">
+    <div className="bg-primary-500 pb-10 pt-2">
       <div className="container mx-auto flex flex-col gap-3 lg:px-32 px-4">
         <h1
           id="hero-heading"
-          className="sm:text-4xl text-3xl text-transparent font-bold"
+          className="sm:text-4xl text-3xl text-text-50 font-bold"
         >
           Discover Timeless Hospitality
         </h1>
-        <p id="hero-description" className="sm:text-2xl text-xl text-white">
+        <p id="hero-description" className="sm:text-2xl text-xl text-text-50">
           Experience the essence of Indian heritage and luxury at AryaVihar.
         </p>
       </div>

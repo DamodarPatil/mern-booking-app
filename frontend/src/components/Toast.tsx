@@ -22,8 +22,8 @@ const Toast = ({ message, type, onClose }: ToastProps) => {
 
   const styles =
     type === "SUCCESS"
-      ? `${baseStyle} bg-[#FF9933]`
-      : `${baseStyle} bg-[#b30000]`;
+      ? `${baseStyle} bg-[#6ec085]`
+      : `${baseStyle} bg-[#f15959]`;
 
   const icon =
     type === "SUCCESS" ? (

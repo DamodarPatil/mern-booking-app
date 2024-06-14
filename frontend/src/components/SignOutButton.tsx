@@ -26,7 +26,7 @@ const SignOutButton = ({ onClick }: { onClick?: () => void }) => {
       {/* Mobile Button */}
       <button
         onClick={handleClick}
-        className="block md:hidden bg-[#FFFFFF] text-[#ff4d4d] px-4 py-1 hover:bg-[#e6e6e6]"
+        className="block md:hidden bg-background-50 text-danger-500 px-4 py-1 hover:bg-background-100"
       >
         Sign out
       </button>
@@ -34,7 +34,7 @@ const SignOutButton = ({ onClick }: { onClick?: () => void }) => {
       {/* Desktop Button */}
       <button
         onClick={handleClick}
-        className="hidden md:inline-block rounded-md bg-[#FFFFFF] text-[#b30000] font-bold px-4 py-1 hover:bg-[#e6e6e6]"
+        className="hidden md:inline-block rounded-md bg-background-50 text-primary-500 font-bold px-4 py-1 hover:bg-background-100"
       >
         Sign out
       </button>

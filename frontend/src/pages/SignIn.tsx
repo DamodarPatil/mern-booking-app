@@ -37,18 +37,18 @@ const SignIn = () => {
   });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-background-50">
       <form
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md space-y-6"
         onSubmit={onSubmit}
       >
-        <h2 className="text-3xl font-bold text-center mb-6 text-black">
+        <h2 className="text-3xl font-bold text-center mb-6 text-text-900">
           Sign In
         </h2>
         <label className="block">
-          <span className="text-gray-700 text-sm font-bold">Email</span>
+          <span className="text-black text-sm font-semibold">Email</span>
           <input
-            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
             {...register("email", { required: "This field is required" })}
             type="email"
           />
@@ -59,9 +59,9 @@ const SignIn = () => {
           )}
         </label>
         <label className="block">
-          <span className="text-gray-700 text-sm font-bold">Password</span>
+          <span className="text-black text-sm font-semibold">Password</span>
           <input
-            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-[#b30000] transition duration-200"
+            className="border rounded w-full py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-accent-500 transition duration-200"
             {...register("password", {
               required: "This field is required",
               minLength: {
@@ -80,13 +80,13 @@ const SignIn = () => {
         <div className="flex flex-col mt-4">
           <span className="text-sm mb-2">
             Not Registered?{" "}
-            <Link to="/register" className="text-[#b30000] hover:underline">
+            <Link to="/register" className="text-accent-500 hover:underline">
               Create an account here
             </Link>
           </span>
           <button
             type="submit"
-            className="w-full md:w-auto bg-[#b30000] text-white py-2 px-4 rounded-md font-semibold hover:bg-[#cc0000] transition duration-200"
+            className="w-full md:w-auto bg-accent-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-accent-600 transition duration-200"
           >
             Login
           </button>
